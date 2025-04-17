@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mansour Bah</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À propos</a></li>
+                <li><a href="skills.html">Compétences</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-section">
+            <h1>Contactez-moi</h1>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Informations de contact</h2>
+                    <div class="info-items">
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+1 514-702-5404</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>bahmansourca@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Montréal, Canada</p>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Suivez-moi</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/bahmoneyboss" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://wa.me/15147025404" class="social-icon whatsapp-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Envoyez-moi un message</h2>
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="nom">Nom</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Envoyer via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mansour Bah. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const nom = document.getElementById('nom').value;
+            const prenom = document.getElementById('prenom').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            const whatsappMessage = `Nouveau message de ${prenom} ${nom} (${email}):\n\n${message}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const whatsappUrl = `https://wa.me/15147025404?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+    </script>
+</body>
+</html> 
