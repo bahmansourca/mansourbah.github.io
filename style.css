@@ -855,4 +855,25 @@ footer::before {
     color: #0056b3;
     transform: translateX(5px);
     background: rgba(0, 123, 255, 0.2);
+}
+
+.project-url {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.project-url a {
+    color: var(--primary-color);
+    text-decoration: none;
+    word-break: break-all;
+    padding: 0.25rem 0.5rem;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.project-url a:hover {
+    color: #0056b3;
+    background: rgba(0, 123, 255, 0.2);
+    text-decoration: underline;
 } 
