@@ -832,4 +832,18 @@ footer::before {
 .project-card:hover::after,
 .interest-card:hover::after {
     opacity: 0.05;
+}
+
+.direct-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.direct-link:hover {
+    color: #0056b3;
+    transform: translateX(5px);
 } 
