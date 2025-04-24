@@ -518,9 +518,14 @@ footer::before {
 }
 
 .project-link {
+    color: white;
     text-decoration: none;
-    color: inherit;
-    display: block;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.2);
 }
 
 .project-content h2 {
@@ -841,9 +846,13 @@ footer::before {
     font-weight: 600;
     margin-bottom: 0.5rem;
     transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 5px;
 }
 
 .direct-link:hover {
     color: #0056b3;
     transform: translateX(5px);
+    background: rgba(0, 123, 255, 0.2);
 } 
